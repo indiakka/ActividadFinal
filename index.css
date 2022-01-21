@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+
+h1{
+	color:blue;
+	text-align:center;
+}
+
+fieldset{
+	background-color:turquoise;
+	border-style:none;
+	border-radius:5px;
+	
+}
+
+legend{
+	color:white;
+	background-color:red;
+	
+}
+
+.arriba{
+	margin-top:1px;
+}
+
+.arriba:hover{
+	border:solid 2px blue;
+}
+
+.amarillo{
+	background-color:yellow;
+	border-radius:5px;
+}
+
+.java{
+	width:2.5cm;
+	background-color:pink;
+	border-radius:5px;
+}

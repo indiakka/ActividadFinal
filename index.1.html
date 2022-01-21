@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Formulario Información Alta Telefónica</title>
+	<link rel="stylesheet" href="index.css" type="text/css">
+		  <script type="text/javascript" src="index.js"></script>
+</head>
+
+<body>
+	<form action="./procesarFormulario.php" name="Telefónica">
+		<h1>Formulario Información Alta Telefónica</h1>
+		<fieldset>
+			<legend>Datos personales</legend>
+			
+				<label for="nombre">Nombre: <input class="amarillo" id="nombre" type="text" name="nombre" value="" maxlength="30"/></label><br/>
+				<label for="apellidos">Apellidos: <input class="amarillo" id="apellidos" type="text" name="apellidos" value=""  maxlength="60"/></label><br/>
+				<label for="direccion">Dirección: <input class="amarillo" id="direccion" type="text" name="direccion" value=""  maxlength="60"/></label><br/>
+				<label for="cp">Codigo Postal: <input class="amarillo" id="cp" type="text" name="cp" value=""  pattern="[0-9]{5}"/></label><br/>
+				<label for="localidad">Localidad: <input class="amarillo" id="localidad" type="text" name="localidad" value=""/></label><br/>
+			
+		</fieldset>
+		<br/>
+		<fieldset>	
+			<legend>Tipo de Contratación</legend>
+				<label for="nc"><input type="radio" id="nc" name="contratacion" value="0" checked="checked" required="required"/>Nueva Contratación</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<label for="porta"><input type="radio" id="porta" name="contratacion" value="1" required="required"/>Portabilidad</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+				<label for="cc"><input type="radio" id="cc" name="contratacion" value="2" required="required"/>Cambio de Contrato</label><br/><br/>
+				<label for="cporta">Elija la compañía actual: </label><select id="cporta" name="compañiaportadora" required="required">
+					<option name="compañia" value="m" selected="selected">Movistar</option>
+					<option name="compañia" value="o">Orange</option>
+					<option name="compañia" value="v">Vodafone</option>
+					<option name="compañia" value="y">Yoigo</option>
+					<option name="compañia" value="nt">No Tengo Ninguna Compañia</option>
+					</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<label for="nuevac">En caso de portabilidad, elija la nueva compañía: </label><select name="nuevacompañia" id="nuevac" required="required">
+					<option name="compañia" value="m" selected="selected">Movistar</option>
+					<option name="compañia" value="o">Orange</option>
+					<option name="compañia" value="v">Vodafone</option>
+					<option name="compañia" value="y">Yoigo</option>
+					</select>
+			
+		</fieldset>
+		<br/>
+		<fieldset>
+			<legend>Datos Bancarios</legend>
+				<label for="banco1">País: <input class="amarillo" id="banco1" type="text" name="pais" value="ES"  readonly="readonly"/>
+				</label> (sólo válido ES)<br/>
+				<label for="banco2">Control IBAN: <input class="amarillo" id="banco2" type="text" name="iban" value="" placeholder="XX" pattern="[0-9]{2}"/></label> (dos dígitos)<br/>
+				<label for="banco3">Entidad: <input class="amarillo" id="banco3" type="text" name="entidad" value="" placeholder="XXXX" pattern="[0-9]{4}"/></label> (cuatro dígitos)<br/>
+				<label for="banco4">Sucursal: <input class="amarillo" id="banco4" type="text" name="sucursal" value="" placeholder="XXXX" pattern="[0-9]{4}" /></label> (cuatro dígitos)<br/>
+				<label for="banco5">DC: <input class="amarillo" id="banco5" type="text" name="dc" value="" placeholder="XX" pattern="[0-9]{2}" /></label> (dos dígitos)<br/>
+				<label for="banco6">Cuenta: <input class="amarillo" id="banco6" type="text" name="cuenta" value="" placeholder="XXXXXXXXXX" pattern="[0-9]{10}"/></label> (diez dígitos)
+		</fieldset>
+		<br/>
+		<fieldset>
+			<legend>Datos Estadísticos-¿Cómo nos conoció?</legend>
+			<label for="tv"><input type="checkbox" name="tv" value="">A través de la TV</label><br/>
+			<label for="radio"><input type="checkbox" name="radio" value="">A través de la radio</label><br/>
+			<label for="internet"><input type="checkbox" name="internet" value="">A través de la Internet</label><br/>
+			<label for="otros"><input type="checkbox" name="otros" value="">Otros</label><br/><br/>
+			<label for="rango"><input id="rango" type="range" name="valor" min="1" max="4"/>Valoración [1-4]</label><br/><br/>
+			<label for="fecha">Fecha de la Encuesta: <input type="date" name="fecha" id="fecha" value="2019-01-01"/></label>
+		</fieldset>	
+		<button class="arriba" type="submit">Enviar Datos</button>
+		<button class="arriba" type="reset">Borrar Datos</button><br/>
+		
+		<button class="java" type="button" value="mostrarValoracion" onclick="mostrarValoracion()">Mostrar Valoracion</button>
+		<button class="java" type="button" value="mostrarCuenta" onclick="mostrarCuenta()">Mostrar Cuenta</button>
+		<button class="java" type="button" value="mostrarDia" onclick="mostrarDia()">Mostrar Dia Semana</button>
+	</form>
+	
+</body>
+</html>
